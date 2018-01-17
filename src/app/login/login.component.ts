@@ -9,12 +9,12 @@ import {FirebaseUISignInSuccess} from 'firebaseui-angular';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
+
 export class LoginComponent implements OnInit {
 
   public form: FormGroup;
 
-  constructor(private afAuth: AngularFireAuth) {
-  }
+  constructor(private afAuth: AngularFireAuth) { }
 
   // constructor(private formBuilder: FormBuilder, private authService: AuthService) {
   //   this.form = this.formBuilder.group({
@@ -53,8 +53,18 @@ export class LoginComponent implements OnInit {
   }
 
   successCallback(data: FirebaseUISignInSuccess) {
-    console.log(data);
+    console.log('data' + data);
   }
   
+  getUserid(){
+    return this.afAuth.authState.subscribe((auth => {
+      if(auth) {
+        console.log('login');
+      } else {
+        console.log('not login');
+      }    
+
+    }))
+  }
 
 }
