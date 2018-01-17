@@ -1,11 +1,11 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {MainComponent} from './main.component';
+import {AppointmentComponent} from './appointment.component';
 import {FirebaseUIModule} from 'firebaseui-angular';
 import {RouterModule, Routes} from '@angular/router';
 
 const routes: Routes = [
-  {path: '', component: MainComponent},
+  {path: '', component: AppointmentComponent},
 ];
 
 @NgModule({
@@ -14,7 +14,7 @@ const routes: Routes = [
     FirebaseUIModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [MainComponent]
+  declarations: [AppointmentComponent]
 })
-export class MainModule {
+export class AppointmentModule {
 }

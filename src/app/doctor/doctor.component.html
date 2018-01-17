@@ -1,0 +1,7 @@
+<p>
+    second-page works
+  </p>
+  <firebase-ui (signInSuccess)="successCallback($event)"></firebase-ui>
+  <button (click)="logout()">Logout</button>
+  <button (click)="getUserid()">get user id</button>
+  <button [routerLink]="['/appointment']">Back to appointment</button>

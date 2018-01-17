@@ -6,12 +6,10 @@ import { AngularFireModule } from 'angularfire2';
 import { environment } from '../environments/environment';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AppRoutingModule } from './/app-routing.module';
-import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { UserComponent } from './user/user.component';
-import { DoctorComponent } from './doctor/doctor.component';
-import { AppointmentComponent } from './appointment/appointment.component';
 
 import {
   AuthMethods,
@@ -57,9 +55,7 @@ const firebaseUiAuthConfig: FirebaseUIAuthConfig = {
 @NgModule({
   declarations: [
     AppComponent,
-    UserComponent,
-    DoctorComponent,
-    AppointmentComponent
+    UserComponent
   ],
   imports: [
     BrowserModule,
